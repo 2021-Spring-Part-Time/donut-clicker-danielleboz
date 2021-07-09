@@ -22,5 +22,6 @@ describe('The creation of DonutMaker', () => {
         underTest.activateAutoClickers();
         expect(underTest.numDonuts).toEqual(112);
     });
+    
 
 });
