@@ -18,9 +18,14 @@ describe('The creation of DonutMaker', () => {
         expect(underTest.numAutoClickers).toEqual(0);
     });
     test('Will add donuts increase by the amount of autoClickers present when fired.', () => {
-        const underTest = new DonutMaker(110, 2);
+        const underTest = new DonutMaker(110, 2, 0, 0, 0);
         underTest.activateAutoClickers();
         expect(underTest.numDonuts).toEqual(112);
+    });
+    test('Will add donuts increate by the amount of autoClickers and multipliers present when fired', () => {
+        const underTest = new DonutMaker(110, 2, 100, 2, 100, 0);
+        underTest.activateAutoClickers();
+        expect(underTest.numDonuts).toEqual(114);
     });
     test('Can it purchase a multiplier AND remove spent donuts?', () => {
         const underTest = new DonutMaker(10, 0, 0, 0, 10);

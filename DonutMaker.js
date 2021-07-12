@@ -57,8 +57,10 @@ class DonutMaker {
     }
 
     activateAutoClickers() {
-        if(this.numAutoClickers > 0) {
-            this.numDonuts += this.numAutoClickers * 1;
+        if(this.numAutoClickers > 0 && this.numMultipliers == 0) {
+            this.numDonuts += this.numAutoClickers;
+        } else if(this.numAutoClickers > 0 && this.numMultipliers > 0) {
+            this.numDonuts += Math.round(this.numAutoClickers * this.numMultipliers);
         }
     }
 
