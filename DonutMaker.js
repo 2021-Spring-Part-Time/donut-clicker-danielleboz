@@ -1,19 +1,59 @@
 class DonutMaker {
-    constructor(numDonuts, numAutoClickers, autoClickerCost) {
+    constructor(numDonuts, numAutoClickers, autoClickerCost, numMultipliers, multiplierCost, donutsPerClick) {
         this.numDonuts = numDonuts;
         this.numAutoClickers = numAutoClickers;
         this.autoClickerCost = autoClickerCost;
+        this.numMultipliers = numMultipliers;
+        this.multiplierCost = multiplierCost;
+        this.donutsPerClick = donutsPerClick;
+    }
+
+    getNumDonuts() {
+        return Math.round(this.numDonuts);
+    }
+
+    getNumAutoClickers() {
+        return this.numAutoClickers;
+    }
+
+    getAutoClickerCost() {
+        return Math.round(this.autoClickerCost);
+    }
+
+    getNumMultipliers() {
+        return this.numMultipliers
+    }
+
+    getMultiplierCost() {
+        return Math.round(this.multiplierCost);
+    }
+
+    getDonutsPerClick() {
+        return Math.round(this.donutsPerClick);
     }
 
     addDonut() {
-        this.numDonuts++;
+        if(this.numMultipliers > 0) {
+            this.numDonuts *= Math.pow(1.2, this.numMultipliers);
+        } else {
+            this.numDonuts++;
+        }
     }
 
     addAutoClicker() {
-        if(this.numDonuts >= 100) {
+        if(this.numDonuts >= this.autoClickerCost) {
             this.numAutoClickers++;
-            this.numDonuts -= 100;
-        } //use this for 3
+            this.numDonuts -= this.autoClickerCost;
+            this.autoClickerCost = Math.round(this.autoClickerCost * (this.numAutoClickers * 1.10));
+        } 
+    }
+
+    addMultiplier() {
+        if(this.numDonuts >= this.multiplierCost) {
+            this.numMultipliers++;
+            this.numDonuts -= this.multiplierCost;
+            this.multiplierCost = Math.round(this.multiplierCost * (this.numMultipliers * 1.10));
+        }
     }
 
     activateAutoClickers() {
@@ -22,11 +62,12 @@ class DonutMaker {
         }
     }
 
-    calculateClickerCost() {
-        if(this.autoClickerCost === 100) {
-            this.numAutoClickers * (1+.10);
+    activateMultipliers() {
+        if(this.numMultipliers > 0) {
+            this.numDonuts *= this.numMultipliers * 1.2;
         }
     }
+
 }
 
 export default DonutMaker;
