@@ -2,3 +2,7 @@ body {
     background-image: url(images\marble-background.jpg);
     background-size: cover;
 }
+
+.main__donut_image {
+    width: 200px;
+}

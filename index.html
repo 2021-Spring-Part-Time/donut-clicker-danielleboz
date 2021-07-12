@@ -25,25 +25,26 @@
             <p>The name of the game is to create as many donuts as you can in the shortest amount of time. You can purcahse auto-clickers and multipliers with donuts. Auto-clickers will automatically click for you, while multipliers will multiply the number of donuts you get with every click. Think you got what it takes to be the ultimate donut maker-baker? Then get clicking!</p>
         </section>
         <section class="main__donutSection">
-            <input type="image" src="images/pink-donut.jpg" name="donutClicker" class="donutClicker" id="donutClicker" />
-            <p>Donuts Made: </p>
+            <button class="main__donut_button">Add Donuts!</button>
+            <p class="main__donutsMade">Donuts Made: <span id="main__donutsMade_count">0</span></p>
         </section>
         <section class="main__clickerSection">
             <h3>Add Auto-Clickers</h3>
-            <p>Cost: ----- Donuts</p>
-            <button class="main__clickerSection_button"></button>
-            <p>Purchased Auto-Clickers: </p>
+            <p class="main__autoClickers">Cost: <span id="main__autoClicker_cost">100</span> Donuts</p>
+            <button class="main__clickerSection_button">Add Auto Clicker</button>
+            <p class="main__autoClickers">Purchased Auto-Clickers: <span id="main__autoClickers_purchased">0</span></p>
         </section>
         <section class="main__multiplierSection">
             <h3>Add Multipliers</h3>
-            <p>Cost: ------ Donuts</p>
-            <button class="main__multiplierSection_button"></button>
-            <p>Purchased Multipliers: </p>
+            <p class="main__multipliers">Cost: <span id="main__multipliers_cost">10</span> Donuts</p>
+            <button class="main__multiplierSection_button">Add Multiplier</button>
+            <p class="main__multipliers">Purchased Multipliers: <span id="main__multipliers_purchased">0</span></p>
         </section>
     </main>
     <footer class="footer">
         <small>&copy Fred the Baker Baking Co. 2021</small>
     </footer>
-    
+
 </body>
+<script src="./app.js"></script>
 </html>
