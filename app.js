@@ -1,5 +1,23 @@
 import DonutMaker from './DonutMaker.js';
 
+var bakerModalBtn = document.querySelector('.header__baker_modalBtn');
+var backdrop = document.querySelector('.header__modal_backdrop');
+var bakerModal = document.querySelector('.header__baker_modalContent');
+var contactModal = document.querySelector('.header__contact_modalBtn');
+
+function openBakerModal() {
+    bakerModal.style.display = 'block';
+    backdrop.style.display = 'block';
+}
+
+function closeModal() {
+    bakerModal.style.display = 'none';
+    backdrop.style.display = 'none';
+}
+
+bakerModalBtn.onclick = openBakerModal();
+backdrop.onclick = closeModal();
+
 const mainDonutButton = document.querySelector('.main__donut_button'),
 numDonutsDiv = document.getElementById('main__donutsMade_count');
 
@@ -37,3 +55,8 @@ const mainResetButton = document.getElementById('main__reset_button');
 mainResetButton.addEventListener('click', () => {
     window.location.reload();
 });
+
+setInterval (function () {
+    myDonutMaker.activateAutoClickers();
+    numDonutsDiv.innerHTML = myDonutMaker.getNumDonuts();
+}, 1000);

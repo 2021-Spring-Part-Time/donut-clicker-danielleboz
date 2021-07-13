@@ -34,7 +34,7 @@ class DonutMaker {
 
     addDonut() {
         if(this.numMultipliers > 0) {
-            this.numDonuts *= Math.pow(1.2, this.numMultipliers);
+            this.numDonuts += Math.pow(1.2, this.numMultipliers);
         } else {
             this.numDonuts++;
         }
@@ -44,7 +44,7 @@ class DonutMaker {
         if(this.numDonuts >= this.autoClickerCost) {
             this.numAutoClickers++;
             this.numDonuts -= this.autoClickerCost;
-            this.autoClickerCost = Math.round(this.autoClickerCost * (this.numAutoClickers * 1.10));
+            this.autoClickerCost = Math.round(this.autoClickerCost * 1.10);
         } 
     }
 
@@ -52,7 +52,7 @@ class DonutMaker {
         if(this.numDonuts >= this.multiplierCost) {
             this.numMultipliers++;
             this.numDonuts -= this.multiplierCost;
-            this.multiplierCost = Math.round(this.multiplierCost * (this.numMultipliers * 1.10));
+            this.multiplierCost = Math.round(this.multiplierCost * 1.10);
         }
     }
 
@@ -68,6 +68,14 @@ class DonutMaker {
         if(this.numMultipliers > 0) {
             this.numDonuts *= this.numMultipliers * 1.2;
         }
+    }
+
+    disableAutoClickerPurchase() {
+        return this.numDonuts < this.autoClickerCost;
+    }
+
+    disableMultiplierPurchase() {
+        return this.numDonuts < this.multiplierCost;
     }
 
 }

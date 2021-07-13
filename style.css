@@ -7,6 +7,15 @@ body {
     margin: auto;
 }
 
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 .header {
     background: rgba(255, 255, 255, 0.5);
     padding: 1rem;
@@ -14,6 +23,27 @@ body {
 
 .header__title {
     margin: auto;
+}
+
+.header__modal_backdrop {
+    /*display: none;*/
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+.header__baker_modalContent {
+    /*display: none;*/
+    position: fixed;
+    background: white;
+    padding: 10px;
+    width: 260px;
+    top: 100px;
+    left: calc(50% - 140px0);
+    z-index: 1;
 }
 
 .main__infoSection {
@@ -27,7 +57,12 @@ body {
 }
 
 .main__donutSection {
+    padding-bottom: 1rem;
     text-align: center;
+}
+
+.main__donut_button {
+    border: none;
 }
 
 .main__donut_image {
@@ -41,8 +76,34 @@ body {
     text-align: center;
 }
 
+.main__clickerSection_button {
+    background-color: hotpink;
+    border: none;
+    border-radius: 8px;
+    padding: .5rem;
+}
+
+.main__clickerSection {
+    background: rgba(255, 255, 255, 0.5);
+    border: #999 solid 1px;
+    padding: 1.5rem;
+}
+
+.main__multiplierSection_button {
+    background-color: rgb(87, 154, 192);
+    border: none;
+    border-radius: 8px;
+    padding: .5rem;
+}
+
+.main__multiplierSection {
+    background: rgba(255, 255, 255, 0.5);
+    border: #999 solid 1px;
+    padding: 1.5rem;
+}
+
 .main__resetSection {
-    padding-bottom: 1.5rem;
+    padding: 1.5rem;
     text-align: center;
 }
 
@@ -50,4 +111,8 @@ body {
     background: rgba(255, 255, 255, 0.5);
     padding: 1rem;
     text-align: center;
+}
+
+button:disabled {
+    background-color: blue;
 }
