@@ -32,3 +32,8 @@ mainMultipliersButton.addEventListener('click', () => {
     numDonutsDiv.innerHTML = myDonutMaker.getNumDonuts();
 });
 
+const mainResetButton = document.getElementById('main__reset_button');
+
+mainResetButton.addEventListener('click', () => {
+    window.location.reload();
+});
