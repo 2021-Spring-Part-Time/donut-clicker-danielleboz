@@ -14,7 +14,7 @@
             <button class="header__dropDown_menu">Menu</button>
             <div class="header__dropDown_content">
                 <button class="header__dropDown_baker"></button>
-                <a href="#" target="_blank"><button class="header__dropDown_cookie">Cookie Clicker</button></a>
+                <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank"><button class="header__dropDown_cookie">Cookie Clicker</button></a>
                 <button class="header__dropDown_contact"></button>
             </div>
         </div>
@@ -22,23 +22,28 @@
     <main class="main">
         <section class="main__infoSection">
             <h2 class="main__infoSection_title">Let's Bake Some Donuts!</h2>
-            <p>The name of the game is to create as many donuts as you can in the shortest amount of time. You can purcahse auto-clickers and multipliers with donuts. Auto-clickers will automatically click for you, while multipliers will multiply the number of donuts you get with every click. Think you got what it takes to be the ultimate donut maker-baker? Then get clicking!</p>
+            <p class="main__infoSection_text">The name of the game is to create as many donuts as you can in the shortest amount of time. You can purchase auto-clickers and multipliers with donuts. Auto-clickers will automatically click for you, while multipliers will multiply the number of donuts you get with every click. Think you got what it takes to be the ultimate donut maker-baker? Then get clicking!</p>
         </section>
         <section class="main__donutSection">
             <button class="main__donut_button">Add Donuts!</button>
             <p class="main__donutsMade">Donuts Made: <span id="main__donutsMade_count">0</span></p>
         </section>
-        <section class="main__clickerSection">
-            <h3>Add Auto-Clickers</h3>
-            <p class="main__autoClickers">Cost: <span id="main__autoClicker_cost">100</span> Donuts</p>
-            <button class="main__clickerSection_button">Add Auto Clicker</button>
-            <p class="main__autoClickers">Purchased Auto-Clickers: <span id="main__autoClickers_purchased">0</span></p>
-        </section>
-        <section class="main__multiplierSection">
-            <h3>Add Multipliers</h3>
-            <p class="main__multipliers">Cost: <span id="main__multipliers_cost">10</span> Donuts</p>
-            <button class="main__multiplierSection_button">Add Multiplier</button>
-            <p class="main__multipliers">Purchased Multipliers: <span id="main__multipliers_purchased">0</span></p>
+        <div class="main__purchase_div">
+            <section class="main__clickerSection">
+                <h3>Add Auto-Clickers</h3>
+                <p class="main__autoClickers">Cost: <span id="main__autoClicker_cost">100</span> Donuts</p>
+                <button class="main__clickerSection_button">Add Auto Clicker</button>
+                <p class="main__autoClickers">Purchased Auto-Clickers: <span id="main__autoClickers_purchased">0</span></p>
+            </section>
+            <section class="main__multiplierSection">
+                <h3>Add Multipliers</h3>
+                <p class="main__multipliers">Cost: <span id="main__multipliers_cost">10</span> Donuts</p>
+                <button class="main__multiplierSection_button">Add Multiplier</button>
+                <p class="main__multipliers">Purchased Multipliers: <span id="main__multipliers_purchased">0</span></p>
+            </section>
+        </div>
+        <section class="main__resetSection">
+            <button class="main__reset_button">Reset</button>
         </section>
     </main>
     <footer class="footer">

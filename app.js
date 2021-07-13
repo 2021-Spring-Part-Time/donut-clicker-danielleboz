@@ -22,7 +22,7 @@ mainAutoClickersButton.addEventListener('click', () => {
 });
 
 const mainMultipliersButton = document.querySelector('.main__multiplierSection_button'),
-multiplierCostSpan = document.getElementById('main__multiplier_cost'),
+multiplierCostSpan = document.getElementById('main__multipliers_cost'),
 purchasedMultipliersSpan = document.getElementById('main__multipliers_purchased');
 
 mainMultipliersButton.addEventListener('click', () => {
@@ -30,4 +30,5 @@ mainMultipliersButton.addEventListener('click', () => {
     multiplierCostSpan.innerHTML = myDonutMaker.getMultiplierCost();
     purchasedMultipliersSpan.innerHTML = myDonutMaker.getNumMultipliers();
     numDonutsDiv.innerHTML = myDonutMaker.getNumDonuts();
-})
+});
+

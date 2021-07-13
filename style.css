@@ -1,8 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
 body {
     background-image: url(images\marble-background.jpg);
     background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    margin: auto;
+}
+
+.header {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+}
+
+.header__title {
+    margin: auto;
+}
+
+.main__infoSection {
+    text-align: center;
+}
+
+.main__infoSection_text {
+    margin: auto;
+    max-width: 90%;
+    padding-bottom: 1.5rem;
+}
+
+.main__donutSection {
+    text-align: center;
 }
 
 .main__donut_image {
     width: 200px;
+}
+
+.main__purchase_div {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.main__resetSection {
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+.footer {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    text-align: center;
 }
