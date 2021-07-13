@@ -1,22 +1,44 @@
 import DonutMaker from './DonutMaker.js';
 
 var bakerModalBtn = document.querySelector('.header__baker_modalBtn');
-var backdrop = document.querySelector('.header__modal_backdrop');
+var backDrop = document.querySelector('.header__modal_backdrop');
 var bakerModal = document.querySelector('.header__baker_modalContent');
-var contactModal = document.querySelector('.header__contact_modalBtn');
 
 function openBakerModal() {
+    backDrop.style.display = 'block';
     bakerModal.style.display = 'block';
-    backdrop.style.display = 'block';
 }
 
-function closeModal() {
+function closeBakerModal() {
+    backDrop.style.display = 'none';
     bakerModal.style.display = 'none';
-    backdrop.style.display = 'none';
 }
 
-bakerModalBtn.onclick = openBakerModal();
-backdrop.onclick = closeModal();
+bakerModalBtn.addEventListener('click', () => {
+    openBakerModal();
+});
+
+backDrop.addEventListener('click', () => {
+    closeBakerModal();
+    closeContactModal();
+});
+
+var contactModalBtn = document.querySelector('.header__contact_modalBtn');
+var contactModal = document.querySelector('.header__contact_modalContent');
+
+function openContactModal() {
+    backDrop.style.display = 'block';
+    contactModal.style.display = 'block';
+}
+
+function closeContactModal() {
+    backDrop.style.display = 'none';
+    contactModal.style.display = 'none';
+}
+
+contactModalBtn.addEventListener('click', () => {
+    openContactModal();
+});
 
 const mainDonutButton = document.querySelector('.main__donut_button'),
 numDonutsDiv = document.getElementById('main__donutsMade_count');

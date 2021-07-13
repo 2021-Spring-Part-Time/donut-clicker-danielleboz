@@ -18,15 +18,16 @@ button:hover {
 
 .header {
     background: rgba(255, 255, 255, 0.5);
-    padding: 1rem;
+
 }
 
 .header__title {
     margin: auto;
+    padding: 1rem;
 }
 
 .header__modal_backdrop {
-    /*display: none;*/
+    display: none;
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
     top: 0;
@@ -36,13 +37,24 @@ button:hover {
 }
 
 .header__baker_modalContent {
-    /*display: none;*/
+    display: none;
+    position: fixed;
+    background: white;
+    padding: 1rem;
+    width: 800px;
+    top: 150px;
+    left: calc(50% - 400px);
+    z-index: 1;
+}
+
+.header__contact_modalContent {
+    display: none;
     position: fixed;
     background: white;
     padding: 10px;
     width: 260px;
     top: 100px;
-    left: calc(50% - 140px0);
+    left: calc(50% - 140px);
     z-index: 1;
 }
 
