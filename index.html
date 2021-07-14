@@ -1,13 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Donut Clicker</title>
-  </head>
-  <body>
-    <div class="container"></div>
-    <script src="./index.js"></script>
-  </body>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Donut Clicker</h1>
+        <div class="header__dropDown">
+            <button class="header__dropDown_menu">Menu</button>
+            <div class="header__dropDown_content">
+                <button class="header__baker_modalBtn">About Fred Baker</button>
+                <div class="header__modal_backdrop"></div>
+                <div class="header__baker_modalContent">
+                    <h2 class="header__baker_modalTitle">About Fred the Baker</h2>
+                    <p>Fred the Baker was a popular advertising character portrayed by actor Michael Vale in commercials for Dunkin' Donuts from 1981 to 1997.</p>
+                    <p>Fred was best known for his catchphrase "Time to make the donuts!"</p>
+                    <p>Fred the Baker was so popular with consumers that when Dunkin' Donuts decided to retire the character, the chain surveyed customers to determine the reaction to the move. Customers said Fred could leave if he were treated like an honored friend and employee. So the company created an official "retirement" celebration for him, including a parade in the city of Boston and a "free donut" day that served over six million customers on September 22, 1997.</p>
+                </div>
+                <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank"><button class="header__dropDown_cookie">Cookie Clicker</button></a>
+                <button class="header__contact_modalBtn">Contact Us</button>
+                <div class="header__contact_modalContent">
+                    <h2 class="header__contact_modalTitle">About the Developer</h2>
+                    <p>Danielle Bosworth is...</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="main__infoSection">
+            <h2 class="main__infoSection_title">Let's Bake Some Donuts!</h2>
+            <p class="main__infoSection_text">The name of the game is to create as many donuts as you can in the shortest amount of time. You can purchase auto-clickers and multipliers with donuts. Auto-clickers will automatically click for you, while multipliers will multiply the number of donuts you get with every click. Think you got what it takes to be the ultimate donut maker-baker? Then get clicking!</p>
+        </section>
+        <section class="main__donutSection">
+            <button class="main__donut_button"><img class="main__donut_image" src="images/candy-donut.jpg"/></button>
+            <p class="main__donutsMade">Donuts Made: <span id="main__donutsMade_count">0</span></p>
+        </section>
+        <div class="main__purchase_div">
+            <section class="main__clickerSection">
+                <h3>Add Auto-Clickers</h3>
+                <p class="main__autoClickers">Cost: <span id="main__autoClicker_cost">100</span> Donuts</p>
+                <button class="main__clickerSection_button">Add Auto Clicker</button>
+                <p class="main__autoClickers">Purchased Auto-Clickers: <span id="main__autoClickers_purchased">0</span></p>
+            </section>
+            <section class="main__multiplierSection">
+                <h3>Add Multipliers</h3>
+                <p class="main__multipliers">Cost: <span id="main__multipliers_cost">10</span> Donuts</p>
+                <button class="main__multiplierSection_button">Add Multiplier</button>
+                <p class="main__multipliers">Purchased Multipliers: <span id="main__multipliers_purchased">0</span></p>
+            </section>
+        </div>
+        <section class="main__resetSection">
+            <button id="main__reset_button">Reset</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <small>&copy Fred the Baker Baking Co. 2021</small>
+    </footer>
+
+</body>
+<script src="./app.js"></script>
 </html>
